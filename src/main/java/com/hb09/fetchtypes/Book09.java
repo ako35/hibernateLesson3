@@ -1,21 +1,21 @@
-package com.hb08.manytomany;
+package com.hb09.fetchtypes;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Book08 {
+public class Book09 {
 
     @Id
     private int id;
 
     private String name;
 
-    @ManyToMany(mappedBy = "bookList")
-    private List<Student08> students=new ArrayList<>();
+    @ManyToOne
+    @JoinColumn
+    private Student09 student;
 
     public int getId() {
         return id;
@@ -33,17 +33,17 @@ public class Book08 {
         this.name = name;
     }
 
-    public List<Student08> getStudents() {
-        return students;
+    public Student09 getStudent() {
+        return student;
     }
 
-    public void setStudents(List<Student08> students) {
-        this.students = students;
+    public void setStudent(Student09 student) {
+        this.student = student;
     }
 
     @Override
     public String toString() {
-        return "Book08{" +
+        return "Book09{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
 
