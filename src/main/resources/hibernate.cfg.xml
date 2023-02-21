@@ -41,7 +41,7 @@
         <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
         <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
 
-        <!-- addAnnotatedClass() yapısını kullanmadan aşağıdaki gibi de Entity classlarımı eklliyebilirim
+        <!-- addAnnotatedClass() yapısını kullanmadan aşağıdaki gibi de Entity classlarımı ekleyebilirim
         <mapping class="com.hb05.manytoone.Student05" />
         <mapping class="com.hb05.manytoone.University" />
         -->

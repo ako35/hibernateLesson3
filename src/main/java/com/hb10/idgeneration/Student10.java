@@ -4,8 +4,8 @@ import javax.persistence.*;
 
 @Entity
 public class Student10 {
-    
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+    @GeneratedValue(generator = "sequence",strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "sequence",sequenceName = "student_seq",initialValue = 1000,allocationSize = 10)
     @Id
     private int id;
